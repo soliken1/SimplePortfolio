@@ -1,10 +1,12 @@
 
+//Burger Responsiveness
 hamburger = document.querySelector(".burger");
 hamburger.onclick = function () {
     navBar = document.querySelector(".nav-bar");
     navBar.classList.toggle("active");
 }
 
+//For Typewriter Animation
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -61,3 +63,28 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+
+function SelectionClicked(selection) {
+    const layers = {
+        'Website': { element: document.getElementById('websitelayer'), select: document.getElementById('website') },
+        'Backgrounds': { element: document.getElementById('backgroundlayer'), select: document.getElementById('background') },
+        'About': { element: document.getElementById('aboutlayer'), select: document.getElementById('about') },
+        'Contacts': { element: document.getElementById('contactlayer'), select: document.getElementById('contacts') },
+    };
+
+    const selectedLayer = layers[selection];
+
+    if (selectedLayer) {
+        Object.values(layers).forEach(layer => {
+            layer.select.classList.remove('selectfocus');
+        });
+
+        selectedLayer.select.classList.add('selectfocus');
+        selectedLayer.element.focus();
+    } else if (selection === 'Home') {
+        Object.values(layers).forEach(layer => {
+            layer.select.classList.remove('selectfocus');
+        });
+    }
+}

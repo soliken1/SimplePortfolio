@@ -2,7 +2,7 @@ html, body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /*Landing Page Classes*/
@@ -14,8 +14,10 @@ html, body {
 }
 
 header {
+    position: fixed;
+    z-index: 1;
     width: 100%;
-    height: 9vh;
+    height: 10vh;
     background-color: #150F38;
     display: flex;
     align-items: center;
@@ -56,10 +58,19 @@ header {
 }
 
 .nav-bar ul li a:hover {
-    border-bottom: 1px solid white;
+    background-color: #C62368;
+    color: white;
+    border-radius: 10px;
+}
+
+.selectfocus {
+    background-color: #C62368;
+    color: white;
+    border-radius: 10px;
 }
 
 .wrapper {
+    padding-top: 75px;
     display: flex;
     flex-flow: row wrap;
 }
@@ -81,6 +92,8 @@ header {
 
 .main {
     height: 480px;
+    display: grid;
+    place-items: center;
 }
 
 .side-1 {
@@ -104,18 +117,47 @@ header {
 .container-2 {
     display: flex;
     flex-direction: row;
-    padding-top: 20px;
-    padding-left: 100px;
+    justify-content: center;
     gap: 10px;
+}
+
+.font-style {
+    font-family: 'Kanit', sans-serif;
+    user-select: none;
+}
+
+.fontweight-1 {
+    font-weight: 100;
+}
+
+.fontweight-4 {
+    font-weight: 400;
+}
+
+.fontsize-16 {
+    font-size: 16px;
+}
+
+.fontsize-32 {
+    font-size: 32px;
+}
+
+.fontsize-38 {
+    font-size: 38px;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-black {
+    color: black;
 }
 
 .selectionbtn {
     height: 35px;
     width: 125px;
     border-radius: 5px;
-    font-family: 'Kanit', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
     border: none;
 }
 
@@ -128,6 +170,48 @@ header {
 .typewrite {
     color: white;
     text-decoration: none;
+}
+
+.pfpimage {
+    width: 50%;
+    border-radius: 15px;
+    filter: drop-shadow(0px 0px 20px
+     rgba(255, 255, 255, 0.9));
+}
+
+.pfpimage:hover {
+    width: 55%;
+    transition: 0.3s;
+    filter: drop-shadow(0px 0px 50px
+     rgba(132, 9, 9, 1));
+}
+
+/*Websites Layout*/
+.websiteslayer {
+    width: 100%;
+    height: 100vh;
+    background-color: #040622;
+}
+
+/*Backgrounds Layout*/
+.backgroundslayer {
+    width: 100%;
+    height: 100vh;
+    background-color: #040622;
+}
+
+/*About Layout*/
+.aboutlayer {
+    width: 100%;
+    height: 100vh;
+    background-color: #040622;
+}
+
+/*Contacts Layout*/
+.contactslayer {
+    width: 100%;
+    height: 100vh;
+    background-color: #040622;
 }
 
 /*Responsive Layouts*/
@@ -181,9 +265,14 @@ header {
         padding: 0;
     }
 
+    .container-2 {
+        justify-content: center;
+    }
+
     .side-1 {
         text-align: center;
     }
+
     .burger {
         display: block;
         cursor: pointer;
@@ -217,6 +306,7 @@ header {
         display: block;
         width: fit-content;
         margin: 80px auto 0 auto;
+        transform: translate(-25%, 0);
         text-align: center;
         transition: 0.5s;
         opacity: 0;
