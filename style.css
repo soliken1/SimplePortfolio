@@ -99,7 +99,6 @@ header {
     display: flex;
     flex-direction: column;
     padding: 100px;
-    gap: 10px;
 }
 
 .container-2 {
@@ -126,6 +125,12 @@ header {
     transition: 0.5s;
 }
 
+.typewrite {
+    color: white;
+    text-decoration: none;
+}
+
+/*Responsive Layouts*/
 @media all and (min-width: 800px) {
     .main {
         flex: 1;
