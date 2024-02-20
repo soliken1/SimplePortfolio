@@ -9,89 +9,106 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
             <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;400&display=swap" rel="stylesheet">
         </head>
     <body>
-        <div class="landingflayer">
+        <section class="landingflayer">
             <!Navigation Bar>
             <header>
                 <div class="name">
                     <a href="#"
-                     class="font-style fontweight-4 fontsize-16 color-white" 
-                     style="text-decoration: none;" 
-                     id="home"
-                     onclick="SelectionClicked('Home')">
-                     Soliken
+                         class="font-style fontweight-4 fontsize-16 color-white" 
+                         style="text-decoration: none;" 
+                         id="home"
+                         onclick="SelectionClicked('Home')">
+                         Soliken
                     </a>
-                </div>
-                <div class="burger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <nav class="nav-bar">
-                    <ul>
-                        <li>
-                            <a onclick="SelectionClicked('Website')" id="website">Websites</a>
-                        </li>
-                        <li>
-                            <a onclick="SelectionClicked('Backgrounds')" id="background">Backgrounds</a>
-                        </li>
-                        <li>
-                            <a onclick="SelectionClicked('About')" id="about">About</a>
-                        </li>
-                        <li>
-                            <a onclick="SelectionClicked('Contacts')" id="contacts">Contacts</a>
-                        </li>
-                    </ul>
-                </nav>
-           </header>
-           <!Landing Content>
-           <div class="wrapper">
-                <div class="side-1">
-                    <div class="container-1">
-                        <label class="font-style fontweight-1 fontsize-32 color-white">
-                                Hello! I'm
-                        </label>
-                        <label class="font-style fontweight-4 fontsize-38 color-white">
-                                Kenneth James Macas
-                        </label>
-                        <h1 class="font-style fontweight-4 fontsize-32 color-white">
-                            <a href="" class="typewrite" data-period="2000" data-type='[ "Front End Developer", "Backend Developer", "Simple Game Developer", "Freelancer" ]'>
-                              <span class="wrap"></span>
-                            </a>
-                        </h1>
-                        <div class="container-2">
-                            <button class="selectionbtn font-style fontsize-16 color-black">Hire Me</button>
-                            <button class="selectionbtn font-style fontsize-16 color-black" onclick="SelectionClicked('Contacts')">Contact Me</button>
+                    </div>
+                    <div class="burger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <nav class="nav-bar">
+                        <ul>
+                            <li>
+                                <a onclick="SelectionClicked('Website')" id="website">Websites</a>
+                            </li>
+                            <li>
+                                <a onclick="SelectionClicked('Backgrounds')" id="background">Backgrounds</a>
+                            </li>
+                            <li>
+                                <a onclick="SelectionClicked('About')" id="about">About</a>
+                            </li>
+                            <li>
+                                <a onclick="SelectionClicked('Contacts')" id="contacts">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+               </header>
+               <!Landing Content>
+               <div class="wrapper">
+                    <div class="side-1">
+                        <div class="container-1 container-p-5">
+                            <label class="font-style fontweight-1 fontsize-32 color-white">
+                                    Hello! I'm
+                            </label>
+                            <label class="font-style fontweight-4 fontsize-38 color-white">
+                                    Kenneth James Macas
+                            </label>
+                            <h1 class="font-style fontweight-4 fontsize-32 color-white">
+                                <label href="" class="typewrite" data-period="2000" data-type='[ "Front End Developer", "Backend Developer", "Simple Game Developer", "Freelancer" ]'>
+                                  <span class="wrap"></span>
+                                </label>
+                            </h1>
+                            <div class="container-2">
+                                <button class="selectionbtn font-style fontsize-16 color-black">Hire Me</button>
+                                <button class="selectionbtn font-style fontsize-16 color-black" onclick="SelectionClicked('Contacts')">Contact Me</button>
+                            </div>
                         </div>
                     </div>
+                    <div class="main">
+                        <img class="pfpimage" src="res/pfp.jpg" />
+                    </div>
                 </div>
-                <div class="main">
-                    <img class="pfpimage" src="res/pfp.jpg" />
+            </section>
+            <section id="websitelayer" tabindex="0">
+                <div class="wrapper">
+                    <div class="side-1">
+                        <div class="container-1 container-ps-5 container pe-5">
+                            <label class="font-style fontweight-4 fontsize-32 color-white">
+                                    Developed
+                            </label>
+                            <label class="font-style fontweight-4 fontsize-32 color-white">
+                                    Websites/Applications
+                            </label>
+                            <div class="border-bottom-5"></div>
+                            <label class="font-style mt-s-2 width-l-3 fontweight-1 fontsize-16 color-white">
+                                My Developed Applications or Website Throughout The Years of Developing.
+                        </label>
+                        </div>  
+                    </div>
+                    <div class="main">
+                            
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="websiteslayer" id="websitelayer" tabindex="0">
-            <div class="wrapper">
-                <label class="font-style fontsize-38 fontweight-4 color-white">I AM WEBSITE LAYER</label>
-            </div>
-        </div>
-        <div class="backgroundslayer" id="backgroundlayer" tabindex="0">
-            <div class="wrapper">
-                <label class="font-style fontsize-38 fontweight-4 color-white">I AM BACKGROUNDS LAYER</label>
-            </div>
-        </div>
-        <div class="aboutlayer" id="aboutlayer" tabindex="0">
-            <div class="wrapper">
-                <label class="font-style fontsize-38 fontweight-4 color-white">I AM ABOUT LAYER</label>
-            </div>
-        </div>
-        <div class="contactslayer" id="contactlayer" tabindex="0">
-            <div class="wrapper">
-                <label class="font-style fontsize-38 fontweight-4 color-white">I AM CONTACTS LAYER</label>
-            </div>
-        </div>
+            </section>
+            <section id="backgroundlayer" tabindex="0">
+                <div class="wrapper">
+                    <label class="font-style fontsize-38 fontweight-4 color-white">I AM BACKGROUNDS LAYER</label>
+                </div>
+            </section>
+            <section id="aboutlayer" tabindex="0">
+                <div class="wrapper">
+                    <label class="font-style fontsize-38 fontweight-4 color-white">I AM ABOUT LAYER</label>
+                </div>
+            </section>
+            <section id="contactlayer" tabindex="0">
+                <div class="wrapper">
+                    <label class="font-style fontsize-38 fontweight-4 color-white">I AM CONTACTS LAYER</label>
+                </div>
+            </section>
        <script src="script.js"></script>
     </body>
 </html>
